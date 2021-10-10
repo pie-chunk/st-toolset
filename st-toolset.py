@@ -218,7 +218,7 @@ def main():
     global server_mode
     global file_mode
     global file_path
-    global CHUNKSIZESIZE
+    global CHUNKSIZE
 
     fobj_tmp = None
 

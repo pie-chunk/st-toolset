@@ -274,7 +274,6 @@ def main():
     elif server_mode:
         server_startup(connection)
     else:
-        print(client_mode, server_mode, target, port)
         assert False, "[!] Invalid options."
 
 if __name__ == "__main__":

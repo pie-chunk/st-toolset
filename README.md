@@ -34,7 +34,11 @@ In client text mode type ":end" to end sending.
 
 EXAMPLE
 1. python3 st-toolset.py --server --chunksize 1024
+  
   (server mode, chunk size: 1024 bytes)
   
+  
 2. python3 st-toolset.py --client --port 8080 --target 192.168.0.186
+  
   (client mode, port: 8080, send data to 192.168.0.186)
+  

@@ -42,3 +42,8 @@ EXAMPLE
   
   (client mode, port: 8080, send data to 192.168.0.186)
   
+3. python3 st-toolset.py --client --port 3333 --target 192.168.0.186 --file ./example.png
+  
+  (client mode, port: 3333, send data to 192.168.0.186, file to send: ./example.png)
+  
+  

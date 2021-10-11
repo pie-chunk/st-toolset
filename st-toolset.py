@@ -1,10 +1,11 @@
+# usr/bin/python3
 '''
 st-toolset.py
 
-Version 0.2.2
+Version 0.2.3
 
 Created 2021 Oct 09
-Last edited 2021 Oct 10
+Last edited 2021 Oct 11
 
 '''
 
@@ -46,7 +47,7 @@ In client text mode type ":end" to end sending.
 
 versioninfo = """
 Socket TCP Transmission Toolset
-Version 0.2.2
+Version 0.2.3
 """
 
 def usage():

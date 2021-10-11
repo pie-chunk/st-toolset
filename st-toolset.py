@@ -1,7 +1,7 @@
 '''
 st-toolset.py
 
-Version 0.2.1
+Version 0.2.2
 
 Created 2021 Oct 09
 Last edited 2021 Oct 10
@@ -46,19 +46,22 @@ In client text mode type ":end" to end sending.
 
 versioninfo = """
 Socket TCP Transmission Toolset
-Version 0.2.1
+Version 0.2.2
 """
 
 def usage():
     print(info)
+    
     exit()
 
 def version():
     print(versioninfo)
+    
     exit()
 
 def getip():
     print("Hostname: %s\nIP Address: %s ."%(hostname, self_ip))
+    
     exit()
 
 def client_startup(connection, fpath):
@@ -66,6 +69,7 @@ def client_startup(connection, fpath):
         permission_ask_str = ":permissionrequest_file"
     else:
         permission_ask_str = ":permissionrequest"
+    
     quitting = False
 
     try:
@@ -156,7 +160,7 @@ def server_startup(connection):
             print("<start of text>")
             while True:
                 received_data_raw = client_socket.recv(CHUNKSIZE)
-                received_data = recieved_data_raw.decode()
+                received_data = received_data_raw.decode()
                 if received_data != ":end":
                     print(received_data)
                 else:
@@ -260,6 +264,7 @@ def main():
             CHUNKSIZE = int(a)
 
     connection = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    
     if file_mode:
         if not client_mode:
             print("[!] --file can only be selected in client mode.")
@@ -274,10 +279,13 @@ def main():
     elif server_mode:
         server_startup(connection)
     else:
-        assert False, "[!] Invalid options."
+        print("[!] Invalid options. Displaying usage().")
+        usage()
 
 if __name__ == "__main__":
     try:
         main()
     except KeyboardInterrupt:
         print("\n[!] Script aborted: KeyboardInterrupt.")
+
+# end of script
